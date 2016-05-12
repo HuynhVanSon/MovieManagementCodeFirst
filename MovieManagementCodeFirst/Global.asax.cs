@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MovieManagementCodeFirst.DAL;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -12,6 +14,7 @@ namespace MovieManagementCodeFirst
     {
         protected void Application_Start()
         {
+            Database.SetInitializer<MovieDBContext>(new MovieInitilizer());
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

@@ -9,7 +9,9 @@ namespace MovieManagementCodeFirst.Models
     {
         public int ID { get; set; }
         public string Name { get; set; }
+        public string Seat { get; set; }
         public int PricePercent { get; set; }
+        public virtual ICollection<Ticket> Tickets { get; set; }
         public TicketType()
         {
 

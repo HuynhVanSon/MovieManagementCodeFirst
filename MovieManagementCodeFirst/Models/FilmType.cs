@@ -9,6 +9,7 @@ namespace MovieManagementCodeFirst.Models
     {
         public int ID { get; set; }
         public string Name { get; set; }
+        public virtual ICollection<Film> Films { get; set; }
         public FilmType()
         {
 

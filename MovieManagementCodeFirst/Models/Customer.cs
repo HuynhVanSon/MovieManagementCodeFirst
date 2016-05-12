@@ -15,6 +15,7 @@ namespace MovieManagementCodeFirst.Models
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public virtual Account Account { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
         public Customer()
         {
 

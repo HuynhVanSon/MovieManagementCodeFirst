@@ -12,8 +12,11 @@ namespace MovieManagementCodeFirst.Models
         public int TicketTypeID { get; set; }
         public int Price { get; set; }
         public int Quantity { get; set; }
+        public DateTime StartHours { get; set; }
+        public DateTime EndHours { get; set; }
         public virtual Film Film { get; set; }
         public virtual TicketType TicketType { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
         public Ticket()
         {
 
