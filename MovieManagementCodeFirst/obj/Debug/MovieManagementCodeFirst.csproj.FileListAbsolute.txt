@@ -25,6 +25,6 @@ C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\Mo
 C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.WebPages.Razor.xml
 C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\Newtonsoft.Json.xml
 C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\Antlr3.Runtime.pdb
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\obj\Debug\MovieManagementCodeFirst.csprojResolveAssemblyReference.cache
 C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\obj\Debug\MovieManagementCodeFirst.dll
 C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\obj\Debug\MovieManagementCodeFirst.pdb
+C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\obj\Debug\MovieManagementCodeFirst.csprojResolveAssemblyReference.cache
