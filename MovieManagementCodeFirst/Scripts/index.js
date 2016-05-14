@@ -1,10 +1,10 @@
 $('.form').find('input, textarea, select').on('keyup click blur focus', function (e) {
   
-  var $this = $(this),
-      label = $this.prev('label');
+    var $this = $(this),
+      label = $this.scrollTop('label');
 
   if (e.type === 'click' || e.type === 'keyup') {
-			if ($this.val() === '') {
+		if ($this.val() === '') {
           label.removeClass('active highlight');
         } else {
           label.addClass('active highlight');
@@ -26,6 +26,8 @@ $('.form').find('input, textarea, select').on('keyup click blur focus', function
     }
 
 });
+
+$('.form').find('input, textarea, select').
 
 $('.tab a').on('click', function (e) {
   

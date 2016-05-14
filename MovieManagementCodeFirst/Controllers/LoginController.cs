@@ -13,26 +13,47 @@ namespace MovieManagementCodeFirst.Controllers
         private MovieDBContext db = new MovieDBContext();
         //
         // GET: /Login/
-        public ActionResult Index()
+        public ActionResult Index(string? url)
         {
+            string action = url.GetValueOrDefault();
+            if (checkLogin() && action != null)
+            {
+                return Redirect(action);
+            }
+            return View();
+        }
+
+        public ActionResult Logout()
+        {
+            Session.Remove(Session["UserID"].ToString());
             return View();
         }
 
         [HttpPost]
-        public ActionResult CheckLogin(Customer cus)
+        public ActionResult CheckLogin(Customer cus, string url)
         {
-            var user = db.Accounts.Where(ac => ac.UserName == cus.Account.UserName && ac.Password == cus.Account.Password).FirstOrDefault();
-            if (user != null)
+            var account = db.Accounts.Where(ac => ac.UserName == cus.Account.UserName && ac.Password == cus.Account.Password).FirstOrDefault();
+            if (account != null)
             {
-                Session["UserID"] = user.ID;
-                Session["UserName"] = user.UserName;
-                return RedirectToAction("Index");
+                Session["UserID"] = account.ID;
+                return Redirect(url);
             }
             else
             {
                 ModelState.AddModelError("", "User or Password is not correct");
             }
             return View("Index");
+        }
+
+        [NonAction]
+        public bool checkLogin()
+        {
+            Account account = db.Accounts.Where(ac => ac.ID == (int)Session["UserID"]).FirstOrDefault();
+            if (account != null)
+            {
+                return true;
+            }
+            return false;
         }
 	}
 }
