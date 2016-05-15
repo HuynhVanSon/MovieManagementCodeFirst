@@ -1,143 +1,28 @@
 ﻿@using MovieManagementCodeFirst.Models
-@model Customer
+@model Account
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_emptyLayout.cshtml";
 }
-<div class="form">
+<div class="login">
+    @using (Html.BeginForm("CheckLogin", "Login", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
 
-    <ul class="tab-group">
-        <li class="tab active"><a href="#login">Đăng nhập</a></li>
-        <li class="tab"><a href="#signup">Đăng ký</a></li>
-    </ul>
+        <h1>Đăng nhập để mua vé!</h1>
 
-    <div class="tab-content">
+        @Html.TextBoxFor(model => model.UserName, new { @placeholder = " Tài khoản *" })
+        @Html.ValidationMessageFor(model => model.UserName)
 
-        <div id="login">
-            <h1>Đăng nhập để mua vé!</h1>
+        @Html.TextBoxFor(model => model.Password, new { @placeholder = " Mật khẩu *" })
+        @Html.ValidationMessageFor(model => model.Password)
 
-            @using (Html.BeginForm("CheckLogin", "Login", FormMethod.Post))
-            {
-                @Html.AntiForgeryToken()
+        <p class="forgot"><a href="#">Quên mật khẩu?</a></p>
 
-                <div class="field-wrap">
-                    <label>
-                        Tài khoản<span class="req">*</span>
-                    </label>
-                    @Html.EditorFor(model => model.Account.UserName)
-                    @Html.ValidationMessageFor(model => model.Account.UserName)
-                </div>
-
-                <div class="field-wrap">
-                    <label>
-                        Mật khẩu<span class="req">*</span>
-                    </label>
-                    @Html.EditorFor(model => model.Account.Password)
-                    @Html.ValidationMessageFor(model => model.Account.Password)
-                </div>
-                
-                
-
-                <p class="forgot"><a href="#">Quên mật khẩu?</a></p>
-
-                <button type="submit" class="button button-block" name="btnSubmit" value="login">Đăng nhập</button>
-
-            }
-        </div>
-
-        <div id="signup">
-            <h1>Đăng ký tài khoản miễn phí</h1>
-
-            @using (Html.BeginForm("Register", "Login", FormMethod.Post))
-            {
-                @Html.AntiForgeryToken()
-
-
-                <div class="field-wrap">
-                    <label>
-                        Tên của bạn<span class="req">*</span>
-                    </label>
-                    @Html.EditorFor(model => model.Name)
-                    @Html.ValidationMessageFor(model => model.Name)
-                </div>
-
-                <div class="top-row">
-
-                    <div class="field-wrap">
-                        <label>
-                            Số CMDN<span class="req">*</span>
-                        </label>
-                        @Html.EditorFor(model => model.IDCard)
-                        @Html.ValidationMessageFor(model => model.IDCard)
-                    </div>
-                    <div class="field-wrap">
-                        <label>
-                            Giới tính<span class="req">*</span>
-                        </label>
-                        @Html.DropDownListFor(model => model.Genders, new SelectList(Enum.GetValues(typeof(Gender))),"")
-                        @Html.ValidationMessageFor(model => model.Genders)
-                    </div>
-                </div>
-                <div class="top-row">
-
-                    <div class="field-wrap">
-                        <label>
-                            Ngày sinh
-                        </label>
-                        @Html.EditorFor(model => model.DateOfBirth)
-                        @Html.ValidationMessageFor(model => model.DateOfBirth)
-                    </div>
-                    <div class="field-wrap">
-                        <label>
-                            Số điện thoại<span class="req">*</span>
-                        </label>
-                        @Html.EditorFor(model => model.PhoneNumber)
-                        @Html.ValidationMessageFor(model => model.PhoneNumber)
-                    </div>
-                </div>
-                
-                <div class="field-wrap">
-                    <label>
-                        Email
-                    </label>
-                    @Html.EditorFor(model => model.Email)
-                    @Html.ValidationMessageFor(model => model.Email)
-                </div>
-                
-                <div class="field-wrap">
-                    <label>
-                        Tài khoản<span class="req">*</span>
-                    </label>
-                    @Html.EditorFor(model => model.Account.UserName)
-                    @Html.ValidationMessageFor(model => model.Account.UserName)
-                </div>
-                
-                <div class="top-row">
-
-                    <div class="field-wrap">
-                        <label>
-                            Mật khẩu<span class="req">*</span>
-                        </label>
-                        @Html.EditorFor(model => model.Account.Password)
-                        @Html.ValidationMessageFor(model => model.Account.Password)
-                    </div>
-                    <div class="field-wrap">
-                        <label>
-                            Xác nhận mật khẩu<span class="req">*</span>
-                        </label>
-                        @Html.EditorFor(model => model.Account.ConfirmPassword)
-                        @Html.ValidationMessageFor(model => model.Account.ConfirmPassword)
-                    </div>
-                </div>
-
-                <button type="submit" class="button button-block" name="btnSubmit" value="signup">Đăng ký</button>
-            }
-        </div>
-
-
-    </div><!-- tab-content -->
-
-</div> <!-- /form -->
+        <button type="submit" class="btn btn-primary btn-block btn-large">Đăng nhập</button>
+    }
+</div>
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/Scripts/index")

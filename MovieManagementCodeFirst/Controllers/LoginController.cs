@@ -1,9 +1,6 @@
 ﻿using MovieManagementCodeFirst.DAL;
 using MovieManagementCodeFirst.Models;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace MovieManagementCodeFirst.Controllers
@@ -13,26 +10,20 @@ namespace MovieManagementCodeFirst.Controllers
         private MovieDBContext db = new MovieDBContext();
         //
         // GET: /Login/
-        public ActionResult Index(string? url)
+        public ActionResult Index()
         {
-            string action = url.GetValueOrDefault();
-            if (checkLogin() && action != null)
+            if (checkLogin())
             {
-                return Redirect(action);
+                return RedirectToAction("Register", "Login", new { area = ""});
             }
             return View();
         }
 
-        public ActionResult Logout()
-        {
-            Session.Remove(Session["UserID"].ToString());
-            return View();
-        }
-
         [HttpPost]
-        public ActionResult CheckLogin(Customer cus, string url)
+        public ActionResult CheckLogin(Account loginAccount, string url)
         {
-            var account = db.Accounts.Where(ac => ac.UserName == cus.Account.UserName && ac.Password == cus.Account.Password).FirstOrDefault();
+            var account = db.Accounts.Where(ac => ac.UserName == loginAccount.UserName
+            && ac.Password == loginAccount.Password).FirstOrDefault();
             if (account != null)
             {
                 Session["UserID"] = account.ID;
@@ -45,9 +36,44 @@ namespace MovieManagementCodeFirst.Controllers
             return View("Index");
         }
 
+        //
+        // GET: /Register/
+        public ActionResult Register()
+        {
+            if (checkLogin())
+            {
+                return RedirectToAction("Index", "Login", new { area = "" });
+            }
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult PostRegister(Customer customer)
+        {
+            var acc = db.Customers.Where(cus => cus.Account.UserName == customer.Account.UserName
+            && cus.Account.Password == customer.Account.Password).FirstOrDefault();
+            if (acc == null)
+            {
+                db.Customers.Add(customer);
+                db.SaveChanges();
+                return RedirectToAction("CheckLogin", new { loginAccount = customer.Account});
+            }
+            return View();
+        }
+
+        public ActionResult Logout()
+        {
+            Session.Remove(Session["UserID"].ToString());
+            return View();
+        }
+
         [NonAction]
         public bool checkLogin()
         {
+            if (Session["UserID"] == null)
+            {
+                return false;
+            }
             Account account = db.Accounts.Where(ac => ac.ID == (int)Session["UserID"]).FirstOrDefault();
             if (account != null)
             {
