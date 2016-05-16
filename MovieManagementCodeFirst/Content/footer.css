@@ -1,0 +1,41 @@
+.footer_wrapper{width: 100%;margin-top: 67px;background-image: url('../Content/image/nen_footer.png');border-top: 5px solid #000;}
+.footer_above{width: 100%;float: left;padding-bottom: 20px;}
+.footer{width: 962px;margin: 0px auto;}
+	.footer_ul{margin-top: -11px;}
+	
+	.footer_li1{display: inline-block;width: 222px;float: left;margin-right: 36px;}
+	.footer_li2{display: inline-block;width: 200px;float: left;margin-right: 47px;}
+	.footer_li3{display: inline-block;width: 215px;float: left;}
+	.footer_li4{display: inline-block;width: 216px;float: right;}
+
+
+	.footer_title_div{margin-bottom: 15px;margin-top: 20px;}
+	.title_footer{color: #fff;font-family: arial;font-size: 16px; font-weight: bold;}
+	.decription_div{margin-top: 5px;}
+	.decription2{font-family: arial;font-size: 13px;color: #fff;line-height: 20px;}
+	.footer_icon_ul{}
+	.footer_icon_li{display: inline;}
+	.footer_table{margin-top:-10px;}
+	.footer_td{font-family: arial;font-size: 13px;color: #fff;border-bottom: 1px dotted #999;width: 200px;padding-top: 10px;
+		padding-bottom: 13px;}
+		.footer_td_last{font-family: arial;font-size: 13px;color: #fff;width: 200px;padding-bottom: 10px;padding-top: 10px;}
+
+		.comment_div{margin-top: 10px;}
+		.comment_image{float: left;margin-right: 5px;}
+
+		.luot_view{font-family: arial;font-size: 13px;color: #fff;line-height: 20px;line-height: 30px;}
+		.luot_view2{font-family: arial;font-size: 11px;color: #fff;line-height: 20px;}
+
+		.footer_input{height: 38;width: 216px;background-color: #333;border:1px solid #999;
+			color: #999;padding-left: 30px;font-style: italic;margin-top: 5px;}
+		.tag{font-family: arial;font-size: 13px;color: #fff;padding:5px;line-height:30px;background-color: #333;margin-top: 10px;}
+
+
+	.footer_under{background-color: #333;width: 100%;float: left;border-top: 1px solid #000;height: 35px;}
+	.address{width: 962px;margin: 0px auto;}
+	.address_left{width: 400px;float: left;}
+		.address_left ul{margin-top: 7px;}
+		.address_left li{display: inline;margin-right: 20px;}
+		.address_left li a{font-family: arial;font-size: 11px;color: #888;text-decoration: none;}
+		.address_right{width: 562px;float: right;}
+		.right_footer{font-family: arial;font-size: 11px;color: #888;float: right;margin-top: 12px;}

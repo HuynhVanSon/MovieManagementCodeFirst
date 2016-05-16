@@ -12,16 +12,22 @@ namespace MovieManagementCodeFirst.Controllers
         // GET: /Login/
         public ActionResult Index()
         {
+            string url = (string)TempData["url"];
+            
             if (checkLogin())
             {
-                return RedirectToAction("Register", "Login", new { area = ""});
+                return Redirect(url);
             }
             return View();
         }
 
         [HttpPost]
-        public ActionResult CheckLogin(Account loginAccount, string url)
+        public ActionResult CheckLogin(Account loginAccount)
         {
+            Index();
+
+            string url = (string)TempData["url"];
+
             var account = db.Accounts.Where(ac => ac.UserName == loginAccount.UserName
             && ac.Password == loginAccount.Password).FirstOrDefault();
             if (account != null)
@@ -42,7 +48,8 @@ namespace MovieManagementCodeFirst.Controllers
         {
             if (checkLogin())
             {
-                return RedirectToAction("Index", "Login", new { area = "" });
+                string url = (string)TempData["url"];
+                return Redirect(url);
             }
             return View();
         }
@@ -52,19 +59,26 @@ namespace MovieManagementCodeFirst.Controllers
         {
             var acc = db.Customers.Where(cus => cus.Account.UserName == customer.Account.UserName
             && cus.Account.Password == customer.Account.Password).FirstOrDefault();
-            if (acc == null)
+            if (acc == null && customer.Account.UserName != null && customer.Account.Password != null)
             {
                 db.Customers.Add(customer);
                 db.SaveChanges();
-                return RedirectToAction("CheckLogin", new { loginAccount = customer.Account});
+
+                var account = db.Accounts.Where(ac => ac.UserName == customer.Account.UserName
+                && ac.Password == customer.Account.Password).FirstOrDefault();
+                    
+                Session["UserID"] = account.ID;
+
+                return this.RedirectToAction("Index");
             }
-            return View();
+            return View("Register");
         }
 
         public ActionResult Logout()
         {
             Session.Remove(Session["UserID"].ToString());
-            return View();
+            string url = (string)TempData["url"];
+            return Redirect(url);
         }
 
         [NonAction]

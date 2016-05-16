@@ -11,16 +11,16 @@ namespace MovieManagementCodeFirst.Models
     {
         [Key, ForeignKey("Customer")]
         public int ID { get; set; }
-        [Required(ErrorMessage="Hãy tài khoản của bạn")]
-        [StringLength(6, ErrorMessage="Tài khoản phải hơn 6 ký tự")]
+        [Required(ErrorMessage="Hãy nhập tài khoảng của bạn")]
+        [StringLength(6, ErrorMessage="Tài khoảng phải hơn 6 ký tự")]
         public string UserName { get; set; }
         [Required(ErrorMessage = "Hãy nhập mật khẩu")]
-        [StringLength(6, ErrorMessage = "Tài khoản phải hơn 6 ký tự")]
+        [StringLength(6, ErrorMessage = "Tài khoảng phải hơn 6 ký tự")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
         [Required(ErrorMessage = "Hãy xác nhận mật khẩu")]
         [DataType(DataType.Password)]
-        [Compare("Password", ErrorMessage="Mật khẩu xác nhận không khớp")]
+        [Compare("Password", ErrorMessage="Mật khẩu xác nhận không đúng")]
         public string ConfirmPassword { get; set; }
         public int IsActive { get; set; }
         public virtual Customer Customer { get; set; }

@@ -1,33 +1,3 @@
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\MovieManagementCodeFirst.dll.config
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\MovieManagementCodeFirst.dll
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\MovieManagementCodeFirst.pdb
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\Antlr3.Runtime.dll
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\EntityFramework.dll
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\EntityFramework.SqlServer.dll
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\Newtonsoft.Json.dll
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.Helpers.dll
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.Mvc.dll
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.Optimization.dll
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.Razor.dll
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.WebPages.Deployment.dll
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.WebPages.dll
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.WebPages.Razor.dll
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\WebGrease.dll
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\EntityFramework.xml
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\EntityFramework.SqlServer.xml
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.Helpers.xml
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.Mvc.xml
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.Optimization.xml
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.Razor.xml
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.WebPages.xml
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.WebPages.Deployment.xml
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.WebPages.Razor.xml
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\Newtonsoft.Json.xml
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\Antlr3.Runtime.pdb
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\obj\Debug\MovieManagementCodeFirst.dll
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\obj\Debug\MovieManagementCodeFirst.pdb
-C:\Users\sonhv\Documents\Visual Studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\obj\Debug\MovieManagementCodeFirst.csprojResolveAssemblyReference.cache
 C:\Users\Huynh Van Son\Documents\Visual Studio 2015\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\obj\Debug\MovieManagementCodeFirst.dll
 C:\Users\Huynh Van Son\Documents\Visual Studio 2015\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\obj\Debug\MovieManagementCodeFirst.pdb
 C:\Users\Huynh Van Son\Documents\Visual Studio 2015\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\MovieManagementCodeFirst.dll.config
@@ -58,3 +28,32 @@ C:\Users\Huynh Van Son\Documents\Visual Studio 2015\Projects\MovieManagementCode
 C:\Users\Huynh Van Son\Documents\Visual Studio 2015\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\Newtonsoft.Json.xml
 C:\Users\Huynh Van Son\Documents\Visual Studio 2015\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\Antlr3.Runtime.pdb
 C:\Users\Huynh Van Son\Documents\Visual Studio 2015\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\obj\Debug\MovieManagementCodeFirst.csprojResolveAssemblyReference.cache
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\MovieManagementCodeFirst.dll.config
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\MovieManagementCodeFirst.dll
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\MovieManagementCodeFirst.pdb
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\Antlr3.Runtime.dll
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\EntityFramework.dll
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\EntityFramework.SqlServer.dll
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\Newtonsoft.Json.dll
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.Helpers.dll
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.Mvc.dll
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.Optimization.dll
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.Razor.dll
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.WebPages.Deployment.dll
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.WebPages.dll
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.WebPages.Razor.dll
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\WebGrease.dll
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\EntityFramework.xml
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\EntityFramework.SqlServer.xml
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.Helpers.xml
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.Mvc.xml
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.Optimization.xml
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.Razor.xml
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.WebPages.xml
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.WebPages.Deployment.xml
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\System.Web.WebPages.Razor.xml
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\Newtonsoft.Json.xml
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\bin\Antlr3.Runtime.pdb
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\obj\Debug\MovieManagementCodeFirst.dll
+C:\Users\sonhv\documents\visual studio 2013\Projects\MovieManagementCodeFirst\MovieManagementCodeFirst\obj\Debug\MovieManagementCodeFirst.pdb

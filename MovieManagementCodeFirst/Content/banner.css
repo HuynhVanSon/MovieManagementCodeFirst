@@ -1,0 +1,39 @@
+body{margin:0px auto;padding:0px;background-image: url('../Content/image/anhnen.png');font-family: arial;}
+.clr {clear:both;}
+.container_wrapper{width: 100%;}
+.header_wrapper{height: auto;margin: 0px auto;}
+.header{height: auto; width: 100%;margin: 0px auto;}
+	.banner_icon{height: 32px;border-top: 3px solid #cc3333;background-color: #333333;
+	}
+		.banner_icon_content{
+			width: 962px;
+			margin: 0px auto;
+			background-color: white;
+		}
+		.banner_icon_content ul{margin-top: 3px;float: left;}
+		.banner_icon_content li{display: inline;}
+		.cart{background-color: #cc3333;width: 102px;height: 48px;box-shadow: 0px 2px 4px #cccccc;
+			border-radius: 7px;float: right;margin-top: -2px;margin-left: 31px;}
+			.cart img{margin-top: 10px;margin-left: 5px;margin-right:10px;float: left}
+			.cart .cart_span{font-size: 13px;font-family: arial;color: #ffffff;margin-top: 15px;float: left;}
+		.banner_icon_content .login{float: right;margin-top: 5px;}
+		.banner_icon_content span a{font-size: 13px;font-family: arial;color: #ffffff;text-decoration: none;}
+
+	.logo_menu_wrapper{width: 100%;margin-top: 4px;}
+	.logo_menu{width: 962px;margin: 0px auto;}
+	.logo {float: left;width: 150px;}
+	.menu_top{width: 452px;float: right;}
+	.menu_top_ul {float: right;margin-top: 23px;}
+	.menu_top_ul li{display: inline;margin-left: 25px;}
+	.menu_top_ul li a{font-size: 14px;font-family: arial;color: #000;text-decoration: none;font-weight: bold;}
+    .menu_top_ul li a:hover{color: #cc3333}
+
+	.slider_wrapper{height: 422px;border-top: 12px solid #333333;border-bottom: 12px solid #333333;margin-top:15px;
+		width: 100%}
+		.slider{margin:0px auto;width: 1349px;}
+		.prev{width: 193px;background-image: url('../Content/image/bgslide1.png');height: 100%;float: left;}
+		.mid{width: 939px;background-color: white;height: 100%;float: left;
+			border-right: 12px solid #333333;border-left: 12px solid #333333;}
+		.next{background-color: teal;height: 100%;float: left;background-image: url('../Content/image/bgslide2.png');
+			width: 193px;}
+		

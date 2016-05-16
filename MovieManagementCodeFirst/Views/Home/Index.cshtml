@@ -2,30 +2,219 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+<div class="content">
+    <div class="intro_wrapper">
+        <img class="ngan" src="@Url.Content("~/Content/icon/ngan.png")" width="100%" />
+        <center><span class="wel">welcome to <span class="red_text">musica,</span> check our latest albums</span></center>
+        <img class="ngan" src="@Url.Content("~/Content/icon/ngan.png")" width="100%" />
+        <div class="intro">
+            <ul>
+                <li class="intro1">
+                    <img src="@Url.Content("~/Content/image/intro1.png")" />
+                    <span class="intro_text1">CHECK OUR CD COLLECTION</span>
+                    <p>
+                        Donec pede justo, fringilla vel, al, vulputate
+                        eget, arcu. In enim justo, lorem ipsum.
+                    </p>
+                </li>
+                <li class="intro2">
+                    <img src="@Url.Content("~/Content/image/intro2.png")" />
+                    <span class="intro_text1">LISTEN BEFORE PURCHASE</span>
+                    <p>
+                        Donec pede justo, fringilla vel, al, vulputate
+                        eget, arcu. In enim justo, lorem ipsum.
+                    </p>
+                </li>
+                <li class="intro3">
+                    <img src="@Url.Content("~/Content/image/intro3.png")" />
+                    <span class="intro_text3">UPCOMING EVENT</span>
+                    <p>
+                        Donec pede justo, fringilla vel, al, vulputate
+                        eget, arcu. In enim justo, lorem ipsum.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div><div class="clr"></div>
+    <div class="product_wrapper1">
+
+        <div class="title_all">
+            <span>LATEST ARRIVALS IN MUSICA</span>
+            <img class="vien" src="@Url.Content("~/Content/icon/ngan.png")" width="638px" height="8px" />
+            <a href="#"><img class="ten" src="image/continue.png" /></a>
+            <a href="#"><img class="ten" src="image/back.png" /></a>
+        </div><div class="clr"></div>
+        <ul class="product_ul">
+            <li class="product_li">
+                <img class="img_product" src="image/product1.png" />
+                <div class="product_div">
+
+                    <span class="name_product">Oh my Deer</span><span class="by">By artist</span><br />
+                    <span class="decription">
+                        <b>Lorem ipsum</b> dolor sit amet, con
+                        adipiscing elit, sed diam nonu.
+                    </span>
+                    <span class="gia">$14.99</span><a href="#"><img class="add" src="image/add_cart.png" /></a>
+                </div>
+            </li>
+            <li class="product_li">
+                <img class="img_product" src="image/product2.png" />
+                <div class="product_div">
+
+                    <span class="name_product">Awaken the Hero</span><span class="by">By artist</span><br />
+                    <span class="decription">
+                        <b>Lorem ipsum</b> dolor sit amet, con
+                        adipiscing elit, sed diam nonu.
+                    </span>
+                    <span class="gia">$17.59</span><a href="#"><img class="add" src="image/add_cart.png" /></a>
+                </div>
+            </li>
+            <li class="product_li">
+                <img class="img_product" src="image/product3.png" />
+                <div class="product_div">
+
+                    <span class="name_product">Oh my Deer</span><span class="by">By artist</span><br />
+                    <span class="decription">
+                        <b>Lorem ipsum</b> dolor sit amet, con
+                        adipiscing elit, sed diam nonu.
+                    </span>
+                    <span class="gia">$8.99</span><a href="#"><img class="add" src="image/add_cart.png" /></a>
+                </div>
+            </li>
+            <li class="product_li">
+                <img class="img_product" src="image/product4.png" />
+                <div class="product_div">
+
+                    <span class="name_product">Ravenna</span><span class="by">By artist</span><br />
+                    <span class="decription">
+                        <b>Lorem ipsum</b> dolor sit amet, con
+                        adipiscing elit, sed diam nonu.
+                    </span>
+                    <span class="gia">$22.99</span><a href="#"><img class="add" src="image/add_cart.png" /></a>
+                </div>
+            </li>
+        </ul><div class="clr"></div>
+
+    </div>
+    <div class="product_wrapper1">
+        <div class="title_all">
+            <span>ALBUMS CURRENTLY ON SALE</span>
+            <img class="vien" src="image/ngan.png" width="638px" height="8px" />
+            <a href="#"><img class="ten" src="image/continue.png" /></a>
+            <a href="#"><img class="ten" src="image/back.png" /></a>
+        </div><div class="clr"></div>
+        <ul class="product_ul">
+            <li class="product_li">
+                <div class="img_product" style="background-image: url('image/product5.png')">
+                    <a href="#"><img class="sale" src="image/sale.png" />
+                </div></a>
+
+                <div class="product_div">
+
+                    <span class="name_product">Oh my Deer</span><span class="by">By artist</span><br />
+                    <div class="div_star">
+                        <img src="image/black_star.png" /><img src="image/black_star.png" />
+                        <img src="image/black_star.png" /><img src="image/black_star.png" />
+                        <img src="image/red_star.png" />
+                    </div>
+                    <span class="decription">
+                        <b>Lorem ipsum</b> dolor sit amet, con
+                        adipiscing elit, sed diam nonu.
+                    </span>
+                    <span class="gia_cu"><del>$14.99</del></span>
+                    <span class="gia_moi">$8.99</span>
+                    <a href="#"><img class="add" src="image/add_cart.png" /></a>
+                </div>
+            </li>
+            <li class="product_li">
+                <div class="img_product" style="background-image: url('image/product6.png')">
+                    <a href="#"><img class="sale" src="image/sale.png" />
+                </div></a>
+
+                <div class="product_div">
+
+                    <span class="name_product">Awaken the Hero</span><span class="by">By artist</span><br />
+                    <div class="div_star">
+                        <img src="image/black_star.png" /><img src="image/black_star.png" />
+                        <img src="image/black_star.png" /><img src="image/black_star.png" />
+                        <img src="image/red_star.png" />
+                    </div>
+                    <span class="decription">
+                        <b>Lorem ipsum</b> dolor sit amet, con
+                        adipiscing elit, sed diam nonu.
+                    </span>
+                    <span class="gia_cu"><del>$14.99</del></span>
+                    <span class="gia_moi">$8.99</span>
+                    <a href="#"><img class="add" src="image/add_cart.png" /></a>
+                </div>
+            </li>
+            <li class="product_li">
+                <div class="img_product" style="background-image: url('image/product7.png')">
+                    <a href="#"><img class="sale" src="image/sale.png" />
+                </div></a>
+
+                <div class="product_div">
+
+                    <span class="name_product">Oh my Deer</span><span class="by">By artist</span><br />
+                    <div class="div_star">
+                        <img src="image/black_star.png" /><img src="image/black_star.png" />
+                        <img src="image/black_star.png" /><img src="image/black_star.png" />
+                        <img src="image/red_star.png" />
+                    </div>
+                    <span class="decription">
+                        <b>Lorem ipsum</b> dolor sit amet, con
+                        adipiscing elit, sed diam nonu.
+                    </span>
+                    <span class="gia_cu"><del>$14.99</del></span>
+                    <span class="gia_moi">$8.99</span>
+                    <a href="#"><img class="add" src="image/add_cart.png" /></a>
+                </div>
+            </li>
+            <li class="product_li">
+                <div class="img_product" style="background-image: url('image/product8.png')">
+                    <a href="#"><img class="sale" src="image/sale.png" />
+                </div></a>
+                <div class="product_div">
+
+                    <span class="name_product">Ravenna</span><span class="by">By artist</span><br />
+                    <div class="div_star">
+                        <img src="image/black_star.png" /><img src="image/black_star.png" />
+                        <img src="image/black_star.png" /><img src="image/black_star.png" />
+                        <img src="image/red_star.png" />
+                    </div>
+                    <span class="decription">
+                        <b>Lorem ipsum</b> dolor sit amet, con
+                        adipiscing elit, sed diam nonu.
+                    </span>
+                    <span class="gia_cu"><del>$14.99</del></span>
+                    <span class="gia_moi">$8.99</span>
+                    <a href="#"><img class="add" src="image/add_cart.png" /></a>
+                </div>
+            </li>
+        </ul><div class="clr"></div>
+    </div>
+    <div class="product_wrapper1">
+        <div class="title_all">
+            <span>OUR MOST IMPORTANT PUBLISHERS</span>
+            <img class="vien" src="image/ngan.png" width="630px" height="8px" />
+        </div><div class="clr"></div>
+        <ul class="image_ul">
+            <li><a href="#"><img src="image/PSD4_08.png" /></a></li>
+            <li><a href="#"><img src="image/PSD4_09.png" /></a></li>
+            <li><a href="#"><img src="image/PSD4_10.png" /></a></li>
+            <li><a href="#"><img src="image/PSD4_11.png" /></a></li>
+            <li><a href="#"><img src="image/PSD4_12.png" /></a></li>
+            <li><a href="#"><img src="image/PSD4_14.png" /></a></li>
+        </ul><div class="clr"></div>
+    </div>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/Scripts/index")
+    <script src="@Url.Content("~/Scripts/jquery-slider.js")" type="text/javascript"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/wowslider.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/script.js")"></script>
+    @*<script src="@Url.Content("~/Scripts/index.js")" type="text/javascript"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>*@
+}

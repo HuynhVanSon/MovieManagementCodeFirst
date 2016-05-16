@@ -11,10 +11,10 @@ namespace MovieManagementCodeFirst.Models
         public int ID { get; set; }
         [Required(ErrorMessage = "Hãy nhập tên của bạn")]
         public string Name { get; set; }
-        [Required(ErrorMessage = "Hãy số chứng minh nhân dân của bạn")]
+        [Required(ErrorMessage = "Hãy nhập số chứng minh nhân dân của bạn")]
         [DataType(DataType.PostalCode)]
         public string IDCard { get; set; }
-        public DateTime DateOfBirth { get; set; }
+        public DateTime? DateOfBirth { get; set; }
         [Required(ErrorMessage = "Hãy chọn giới tính của bạn")]
         public Gender Genders { get; set; }
         public string Email { get; set; }

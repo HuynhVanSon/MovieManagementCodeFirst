@@ -3,42 +3,141 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Vé Phim</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <link href="@Url.Content("~/Content/style.css")" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/style.css")" />
     <link href='http://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/banner.css")" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/content.css")" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/footer.css")" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/slider.css")" />
+    <!-- Start WOWSlider.com HEAD section -->
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/style-slider.css")" />
+    <!-- End WOWSlider.com HEAD section -->
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", null, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
+    <div class="container_wrapper">
+        <div class="header_wrapper">
+            <div class="header">
+                <div class="banner_icon">
+                    <div class="banner_icon_content">
+                        <ul>
+                            <li><a href="#"><img src="@Url.Content("~/Content/social-icon/icon1.png")" /></a></li>
+                            <li><a href="#"><img src="@Url.Content("~/Content/social-icon/icon2.png")" /></a></li>
+                            <li><a href="#"><img src="@Url.Content("~/Content/social-icon/icon3.png")" /></a></li>
+                            <li><a href="#"><img src="@Url.Content("~/Content/social-icon/icon4.png")" /></a></li>
+                            <li><a href="#"><img src="@Url.Content("~/Content/social-icon/icon5.png")" /></a></li>
+                        </ul>
+                        <div class="cart">
+                            <img src="@Url.Content("~/Content/icon/cart.png")" />
+                            <div class="cart_span">Cart(0)</div>
+                        </div>
+                        <span class="login"><a href="#">Đăng nhập / </a><a href="#"> Đăng ký</a></span>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
+        <div class="logo_menu_wrapper">
+            <div class="logo_menu">
+                <div class="logo"><img src="@Url.Content("~/Content/icon/logo.png")" /></div>
+                <div class="menu_top">
+                    <ul class="menu_top_ul">
+                        <li><a href="#">Trang chủ</a></li>
+                        <li><a href="#">Thể loại</a></li>
+                        <li><a href="#">Lịch chiếu</a></li>
+                        <li><a href="#">Đăng nhập</a></li>
+                    </ul>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+        </div>
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+        <div class="footer_wrapper">
+            <div class="footer_above">
+                <div class="footer">
+                    <ul class="footer_ul">
+                        <li class="footer_li1">
+                            <div class="footer_title_div"><span class="title_footer">Về chúng tôi</span></div>
+                            <div class="decription_div">
+                                <span class="decription2">
+                                    <b>PS Cinema</b> là rạp chiếu phim
+                                    hàng đầu Việt Nam. Mong muốn mang đến
+                                    sự hài lòng nhất có thể cho quý khách
+                                    hàng với chất lượng hình ảnh và âm thanh
+                                    tuyệt vời nhất.
+                                </span>
+                            </div>
+                            <div class="footer_title_div"><span class="title_footer">Liên kết</span></div>
+                            <ul class="footer_icon_ul">
+                                <li class="footer_icon_li"><a href="#"><img src="@Url.Content("~/Content/social-icon/icon1.png")" /></a></li>
+                                <li class="footer_icon_li"><a href="#"><img src="@Url.Content("~/Content/social-icon/icon2.png")" /></a></li>
+                                <li class="footer_icon_li"><a href="#"><img src="@Url.Content("~/Content/social-icon/icon3.png")" /></a></li>
+                                <li class="footer_icon_li"><a href="#"><img src="@Url.Content("~/Content/social-icon/icon4.png")" /></a></li>
+                                <li class="footer_icon_li"><a href="#"><img src="@Url.Content("~/Content/social-icon/icon5.png")" /></a></li>
+                            </ul>
+                        </li>
+                        <li class="footer_li2">
+                            <div class="footer_title_div"><span class="title_footer">Liên hệ</span></div>
+                            <table class="footer_table">
+                                <tr>
+                                    <td class="footer_td">Phú Ninh - Quảng Nam</td>
+                                </tr>
+                                <tr>
+                                    <td class="footer_td">Huỳnh Văn Sơn</td>
+                                </tr>
+                                <tr>
+                                    <td class="footer_td">Sơn Tịnh - Quảng Ngãi</td>
+                                </tr>
+                                <tr>
+                                    <td class="footer_td_last">Nguyễn Phước</td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li class="footer_li3">
+                            <div class="footer_title_div"><span class="title_footer">Phim gần đây</span></div>
+                            <div class="comment_div">
+                                <img class="comment_image" src="@Url.Content("~/Content/image/PSD4_20.png")" />
+                                <span class="comment_span">
+                                    <span class="luot_view"><b>Phim hay</b></span><br />
+                                    <span class="luot_view2"><img src="@Url.Content("~/Content/icon/comment.png")" /> 12 Bình luận</span>
+                                </span>
+                            </div><div class="clr"></div>
+                            <div class="comment_div">
+                                <img class="comment_image" src="@Url.Content("~/Content/image/PSD4_23.png")" />
+                                <span class="comment_span">
+                                    <span class="luot_view"><b>Phim hay 2 </b></span><br />
+                                    <span class="luot_view2"><img src="@Url.Content("~/Content/icon/comment.png")" /> 12 Bình luận</span>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="footer_li4">
+                            <div class="footer_title_div"><span class="title_footer">Tìm kiếm phim</span></div>
+                            <input class="footer_input" type="text" placeholder="Enter search" />
+                            <div class="footer_title_div"><span class="title_footer">Thẻ</span></div>
+                            <span class="tag">Anh yêu em</span>
+                            <span class="tag">Có gì đâu</span>
+                            <span class="tag">Em đi đi</span>
+                            <span class="tag">Bỏ đi Phước</span>
+                            <span class="tag">Năng nỉ mà</span>
+                        </li>
+                        <div class="clr"></div>
+                    </ul>
+                </div><div class="clr"></div>
+            </div><div class="clr"></div>
+            <div class="footer_under">
+                <div class="address">
+                    <div class="address_left">
+                    </div>
+                    <div class="address_right"><span class="right_footer">Design by PS :)</span></div>
+                </div>
+            </div>
+        </div>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+                @RenderSection("scripts", required: false)
+        <script type="text/javascript" src="@Url.Content("~/Scripts/slider.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.js")"></script>
     </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
 </body>
 </html>

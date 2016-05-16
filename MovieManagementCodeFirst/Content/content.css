@@ -1,0 +1,48 @@
+.content{width:962px;margin: 0 auto;height: auto;}
+.content .intro_wrapper{margin-top: 24px;}
+.content .intro_wrapper .ngan{margin-top: 22px;margin-bottom: 20px;}
+			.wel{font-family: fantasy;font-size: 36px; color: #333;text-transform: uppercase;
+			}
+			.wel .red_text{background-color: #cc3333;color: white;padding-right: 4px;padding-left:4px;}
+		.intro{margin-top: 22px;}
+		.intro ul{}
+		.intro1{height: 61px;width: 261px;background-color: #333;display: inline;padding: 20px;
+			border-radius: 6px;margin-right: 29px;float: left;}
+			.intro1 img{float: left;margin-right: 10px;}
+			.intro_text1{font-family: fantasy;font-size: 18px; color: #fff;text-transform: uppercase;}
+		.intro2{height: 61px;width: 261px;background-color: #CC3333;display: inline;
+			border-radius: 6px;margin-right: 29px;padding: 20px;float: left;}
+			.intro2 img{float: left;margin-right: 10px;}
+			.intro_text2{font-family: fantasy;font-size: 18px; color: #fff;text-transform: uppercase;}
+		.intro3{height: 61px;width: 261px;background-color: #333;
+			display: inline;border-radius: 6px;padding: 20px;float: left;}
+			.intro3 img{float: left;margin-right: 10px;}
+			.intro_text3{font-family: fantasy;font-size: 18px; color: #fff;text-transform: uppercase;}
+			.intro p{font-family: arial;font-size: 13px; color: #fff;}
+
+.product_wrapper1{margin-top: 64px;}
+	.product1{}
+	.title_all span{font-family: fantasy;font-size: 24px; color: #333;float: left;margin-top: -10px;}
+	.title_all .vien{float: left;}
+	.title_all .ten{margin-top: -5px;margin-left: 5px;float: right;}
+
+	.product_ul{margin-left: -11px;}
+	.product_li{width: 232px;display: inline;float: left;padding-bottom: 20px;
+		background-color: #fff;border-radius: 4px;margin-left: 11px;box-shadow: 0 4px 2px #999;}
+		.product_div{margin-left: 10px;}
+		.product_li .img_product{width: 232;height: 230px; margin-bottom: 18px;}
+		.name_product{font-size: 16px;font-weight: bold;font-family: arial;color: #333;}
+		.by{font-size: 14px;font-style: italic;font-family: arial;color: #333;margin-left: 20px;}
+		.div_star{margin-bottom: 8px; margin-top: 8px;}
+		.decription{font-family: arial;font-size: 13px;color: #000;margin-right: 10px;}
+		.gia{font-size: 18px;font-weight: bold;font-family: arial;color: #333;float: left;margin-top: 25px;}
+		.add{float: right;margin-top: 20px;margin-right: 10px;}
+		.sale{margin-top: 10px; margin-left: 10px;}
+		.gia_cu{font-size: 15px;font-weight: bold;font-family: arial;color: #333;float: left;margin-top: 25px;}
+		.gia_moi{font-size: 15px;font-weight: bold;font-family: arial;color: #fff;
+			background-color:#cc3333;float: left;margin-top: 20px;margin-left: 10px;padding:5px;}
+
+
+			.image_ul{}
+			.image_ul li{display: inline;margin-left: 0px;float: left;}
+
