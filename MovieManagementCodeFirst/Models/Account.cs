@@ -22,6 +22,7 @@ namespace MovieManagementCodeFirst.Models
         [DataType(DataType.Password)]
         [Compare("Password", ErrorMessage="Mật khẩu xác nhận không đúng")]
         public string ConfirmPassword { get; set; }
+        public int Role { get; set; }
         public int IsActive { get; set; }
         public virtual Customer Customer { get; set; }
         public Account()

@@ -1,0 +1,59 @@
+﻿@using MovieManagementCodeFirst.Models
+@model IEnumerable<Film>
+
+@{
+    ViewBag.Title = "Lịch chiếu phim";
+}
+
+
+<div class="content">
+    <div class="product_wrapper1">
+        <img class="ngan" src="@Url.Content("~/Content/icon/ngan.png")" width="100%" />
+
+        <form action="" method="post">
+            @Html.Label("dateSearch", "Tìm kiếm theo ngày", new { @class = "textsize" })
+            @Html.TextBox("dateSearch", "", new { @type = "Date" })
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Tìm kiếm</button>
+        </form>
+
+        <table style="width: 100%">
+            <tr>
+                <th class="textsize">
+                    Tên Phim
+                </th>
+                <th class="textsize">
+                    Đạo diễn
+                </th>
+                <th class="textsize">
+                    Khung giờ
+                </th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th>
+                        <a href="@Url.Content("")">@item.Name</a>
+                    </th>
+                    <th>
+                        @item.Director
+                    </th>
+                    <th>
+                        @foreach (var ticket in item.Tickets)
+                        {
+                            <span class="tag">@ticket.StartHours - @ticket.EndHours</span>
+                        }
+                    </th>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/Scripts/index")
+    <script src="@Url.Content("~/Scripts/jquery-slider.js")" type="text/javascript"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/wowslider.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/script.js")"></script>
+}

@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using MovieManagementCodeFirst.Models
+@using MovieManagementCodeFirst.DAL
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -6,7 +9,6 @@
     <title>@ViewBag.Title - Vé Phim</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/style.css")" />
     <link href='http://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/banner.css")" />
     <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/content.css")" />
@@ -17,41 +19,49 @@
     <!-- End WOWSlider.com HEAD section -->
 </head>
 <body>
+    @{ 
+        MovieDBContext db = new MovieDBContext();
+        List<Film> recentFilms = db.Films.ToList();
+        recentFilms.Reverse();
+        recentFilms = recentFilms.Take(2).ToList();
+    }
     <div class="container_wrapper">
         <div class="header_wrapper">
             <div class="header">
                 <div class="banner_icon">
                     <div class="banner_icon_content">
                         <ul>
-                            <li><a href="#"><img src="@Url.Content("~/Content/social-icon/icon1.png")" /></a></li>
-                            <li><a href="#"><img src="@Url.Content("~/Content/social-icon/icon2.png")" /></a></li>
-                            <li><a href="#"><img src="@Url.Content("~/Content/social-icon/icon3.png")" /></a></li>
-                            <li><a href="#"><img src="@Url.Content("~/Content/social-icon/icon4.png")" /></a></li>
-                            <li><a href="#"><img src="@Url.Content("~/Content/social-icon/icon5.png")" /></a></li>
+                            <li><a href="https://facebook.com"><img src="@Url.Content("~/Content/social-icon/icon-facebook.png")" /></a></li>
+                            <li><a href="https://gmail.google.com"><img src="@Url.Content("~/Content/social-icon/icon-gmail.png")" /></a></li>
+                            <li><a href="https://skype.com"><img src="@Url.Content("~/Content/social-icon/icon-skype.png")" /></a></li>
+                            <li><a href="https://twitter.com/"><img src="@Url.Content("~/Content/social-icon/icon-twitter.png")" /></a></li>
+                            <li><a href="https://youtube.com/"><img src="@Url.Content("~/Content/social-icon/icon-youtube.png")" /></a></li>
                         </ul>
                         <div class="cart">
                             <img src="@Url.Content("~/Content/icon/cart.png")" />
                             <div class="cart_span">Cart(0)</div>
                         </div>
-                        <span class="login"><a href="#">Đăng nhập / </a><a href="#"> Đăng ký</a></span>
+                        <span class="login" style="display: @ViewBag.loginDisplay">@Html.ActionLink("Đăng nhập /", "Index", "Login")@Html.ActionLink("Đăng ký", "Register", "Login")</span>
+                    </div>
+                </div>
+                <div class="logo_menu_wrapper">
+                    <div class="logo_menu">
+                        <div class="logo"><img src="@Url.Content("~/Content/icon/logo.png")" /></div>
+                        <div class="menu_top">
+                            <ul class="menu_top_ul">
+                                <li>@Html.ActionLink("Trang chủ", "Index", "Home")</li>
+                                <li>@Html.ActionLink("Thể loại", "FilmType", "Home", new { id = 1})</li>
+                                <li>@Html.ActionLink("Lịch chiếu", "Schedule", "Home")</li>
+                                <li class="hello">Xin chào @ViewBag.accountDisplay</li>
+                                <li style="display: @ViewBag.adminDisplay">@Html.ActionLink("Quản lý", "Index", "Home")</li>
+                            </ul>
+                        </div>
+                        <div style="clear:both"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="logo_menu_wrapper">
-            <div class="logo_menu">
-                <div class="logo"><img src="@Url.Content("~/Content/icon/logo.png")" /></div>
-                <div class="menu_top">
-                    <ul class="menu_top_ul">
-                        <li><a href="#">Trang chủ</a></li>
-                        <li><a href="#">Thể loại</a></li>
-                        <li><a href="#">Lịch chiếu</a></li>
-                        <li><a href="#">Đăng nhập</a></li>
-                    </ul>
-                </div>
-                <div style="clear:both"></div>
-            </div>
-        </div>
+        
         @RenderBody()
         <div class="footer_wrapper">
             <div class="footer_above">
@@ -70,11 +80,11 @@
                             </div>
                             <div class="footer_title_div"><span class="title_footer">Liên kết</span></div>
                             <ul class="footer_icon_ul">
-                                <li class="footer_icon_li"><a href="#"><img src="@Url.Content("~/Content/social-icon/icon1.png")" /></a></li>
-                                <li class="footer_icon_li"><a href="#"><img src="@Url.Content("~/Content/social-icon/icon2.png")" /></a></li>
-                                <li class="footer_icon_li"><a href="#"><img src="@Url.Content("~/Content/social-icon/icon3.png")" /></a></li>
-                                <li class="footer_icon_li"><a href="#"><img src="@Url.Content("~/Content/social-icon/icon4.png")" /></a></li>
-                                <li class="footer_icon_li"><a href="#"><img src="@Url.Content("~/Content/social-icon/icon5.png")" /></a></li>
+                                <li class="footer_icon_li"><a href="https://facebook.com"><img src="@Url.Content("~/Content/social-icon/icon-facebook.png")" /></a></li>
+                                <li class="footer_icon_li"><a href="https://gmail.google.com"><img src="@Url.Content("~/Content/social-icon/icon-gmail.png")" /></a></li>
+                                <li class="footer_icon_li"><a href="https://skype.com"><img src="@Url.Content("~/Content/social-icon/icon-skype.png")" /></a></li>
+                                <li class="footer_icon_li"><a href="https://twitter.com/"><img src="@Url.Content("~/Content/social-icon/icon-twitter.png")" /></a></li>
+                                <li class="footer_icon_li"><a href="https://youtube.com/"><img src="@Url.Content("~/Content/social-icon/icon-youtube.png")" /></a></li>
                             </ul>
                         </li>
                         <li class="footer_li2">
@@ -94,22 +104,19 @@
                                 </tr>
                             </table>
                         </li>
+
                         <li class="footer_li3">
                             <div class="footer_title_div"><span class="title_footer">Phim gần đây</span></div>
-                            <div class="comment_div">
-                                <img class="comment_image" src="@Url.Content("~/Content/image/PSD4_20.png")" />
-                                <span class="comment_span">
-                                    <span class="luot_view"><b>Phim hay</b></span><br />
-                                    <span class="luot_view2"><img src="@Url.Content("~/Content/icon/comment.png")" /> 12 Bình luận</span>
-                                </span>
-                            </div><div class="clr"></div>
-                            <div class="comment_div">
-                                <img class="comment_image" src="@Url.Content("~/Content/image/PSD4_23.png")" />
-                                <span class="comment_span">
-                                    <span class="luot_view"><b>Phim hay 2 </b></span><br />
-                                    <span class="luot_view2"><img src="@Url.Content("~/Content/icon/comment.png")" /> 12 Bình luận</span>
-                                </span>
-                            </div>
+                            @foreach (var item in recentFilms)
+                            {
+                                <div class="comment_div">
+                                    <a href="@item.ID"><img class="comment_image" src="@Url.Content(item.Image)" /></a>
+                                    <span class="comment_span">
+                                        <span class="luot_view"><b>@item.Name</b></span><br />
+                                        <span class="luot_view2"><img src="@Url.Content("~/Content/icon/comment.png")" />@item.Director</span>
+                                    </span>
+                                </div><div class="clr"></div>
+                            }
                         </li>
                         <li class="footer_li4">
                             <div class="footer_title_div"><span class="title_footer">Tìm kiếm phim</span></div>

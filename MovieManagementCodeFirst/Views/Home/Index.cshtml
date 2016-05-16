@@ -1,36 +1,39 @@
-﻿@{
+﻿@using MovieManagementCodeFirst.Models
+@model IEnumerable<Film>
+
+@{
     ViewBag.Title = "Home Page";
 }
 
 <div class="content">
     <div class="intro_wrapper">
         <img class="ngan" src="@Url.Content("~/Content/icon/ngan.png")" width="100%" />
-        <center><span class="wel">welcome to <span class="red_text">musica,</span> check our latest albums</span></center>
+        <center><span class="wel">Chào mừng bạn đã đến với <span class="red_text">PS cinema,</span> đặt vé phim online</span></center>
         <img class="ngan" src="@Url.Content("~/Content/icon/ngan.png")" width="100%" />
         <div class="intro">
             <ul>
                 <li class="intro1">
-                    <img src="@Url.Content("~/Content/image/intro1.png")" />
-                    <span class="intro_text1">CHECK OUR CD COLLECTION</span>
+                    <img src="@Url.Content("~/Content/icon/intro-trust.png")" />
+                    <span class="intro_text1">Đáng tin cậy</span>
                     <p>
-                        Donec pede justo, fringilla vel, al, vulputate
-                        eget, arcu. In enim justo, lorem ipsum.
+                        Làm việc bảo mật và có trách nhệm,
+                        chúng tôi mang đến cho bạn niềm tin.
                     </p>
                 </li>
                 <li class="intro2">
-                    <img src="@Url.Content("~/Content/image/intro2.png")" />
-                    <span class="intro_text1">LISTEN BEFORE PURCHASE</span>
+                    <img src="@Url.Content("~/Content/icon/intro-easy.png")" />
+                    <span class="intro_text1">Dể dàng</span>
                     <p>
-                        Donec pede justo, fringilla vel, al, vulputate
-                        eget, arcu. In enim justo, lorem ipsum.
+                        Động ngũ làm việc nhiệt tình và một trang
+                        web thân thiện, mua vé xem phim một cách dể dàng.
                     </p>
                 </li>
                 <li class="intro3">
-                    <img src="@Url.Content("~/Content/image/intro3.png")" />
-                    <span class="intro_text3">UPCOMING EVENT</span>
+                    <img src="@Url.Content("~/Content/icon/intro-fast.png")" />
+                    <span class="intro_text3">Nhanh chóng</span>
                     <p>
-                        Donec pede justo, fringilla vel, al, vulputate
-                        eget, arcu. In enim justo, lorem ipsum.
+                        Giao dịch online gọn nhẹ, Kết hợp với
+                        chứng minh thư, bạn sex không còn lo mất vé.
                     </p>
                 </li>
             </ul>
@@ -38,162 +41,68 @@
     </div><div class="clr"></div>
     <div class="product_wrapper1">
 
+        @{
+            List<Film> listRecent = Model.Take(4).ToList();
+        }
         <div class="title_all">
-            <span>LATEST ARRIVALS IN MUSICA</span>
+            <span>FILM GẦN ĐÂY</span>
             <img class="vien" src="@Url.Content("~/Content/icon/ngan.png")" width="638px" height="8px" />
-            <a href="#"><img class="ten" src="image/continue.png" /></a>
-            <a href="#"><img class="ten" src="image/back.png" /></a>
+            <a href="#"><img class="ten" src="@Url.Content("~/Content/icon/continue.png")" /></a>
+            <a href="#"><img class="ten" src="@Url.Content("~/Content/icon/back.png")" /></a>
         </div><div class="clr"></div>
         <ul class="product_ul">
-            <li class="product_li">
-                <img class="img_product" src="image/product1.png" />
-                <div class="product_div">
+            @foreach (var item in listRecent)
+            {
+                <li class="product_li">
+                    <img class="img_product" src="@Url.Content(item.Image)" />
+                    <div class="product_div">
 
-                    <span class="name_product">Oh my Deer</span><span class="by">By artist</span><br />
-                    <span class="decription">
-                        <b>Lorem ipsum</b> dolor sit amet, con
-                        adipiscing elit, sed diam nonu.
-                    </span>
-                    <span class="gia">$14.99</span><a href="#"><img class="add" src="image/add_cart.png" /></a>
-                </div>
-            </li>
-            <li class="product_li">
-                <img class="img_product" src="image/product2.png" />
-                <div class="product_div">
-
-                    <span class="name_product">Awaken the Hero</span><span class="by">By artist</span><br />
-                    <span class="decription">
-                        <b>Lorem ipsum</b> dolor sit amet, con
-                        adipiscing elit, sed diam nonu.
-                    </span>
-                    <span class="gia">$17.59</span><a href="#"><img class="add" src="image/add_cart.png" /></a>
-                </div>
-            </li>
-            <li class="product_li">
-                <img class="img_product" src="image/product3.png" />
-                <div class="product_div">
-
-                    <span class="name_product">Oh my Deer</span><span class="by">By artist</span><br />
-                    <span class="decription">
-                        <b>Lorem ipsum</b> dolor sit amet, con
-                        adipiscing elit, sed diam nonu.
-                    </span>
-                    <span class="gia">$8.99</span><a href="#"><img class="add" src="image/add_cart.png" /></a>
-                </div>
-            </li>
-            <li class="product_li">
-                <img class="img_product" src="image/product4.png" />
-                <div class="product_div">
-
-                    <span class="name_product">Ravenna</span><span class="by">By artist</span><br />
-                    <span class="decription">
-                        <b>Lorem ipsum</b> dolor sit amet, con
-                        adipiscing elit, sed diam nonu.
-                    </span>
-                    <span class="gia">$22.99</span><a href="#"><img class="add" src="image/add_cart.png" /></a>
-                </div>
-            </li>
+                        <span class="name_product">@item.Name</span><span class="by">By @item.Director</span><br />
+                        <span class="decription">
+                            @item.Description
+                        </span>
+                        <span class="gia">@item.Tickets.Where(t => t.ID == 1).SingleOrDefault().Price đ</span>
+                        <a href="#"><img class="add" src="@Url.Content("~/Content/icon/add_cart.png")" /></a>
+                    </div>
+                </li>
+            }
         </ul><div class="clr"></div>
 
     </div>
     <div class="product_wrapper1">
+        @{
+            List<Film> listGoodSale = Model.Where(f => f.Tickets.Where(t => t.TicketType.ID == 1).SingleOrDefault().Orders.Count > 100).Take(4).ToList();
+        }
+
         <div class="title_all">
-            <span>ALBUMS CURRENTLY ON SALE</span>
-            <img class="vien" src="image/ngan.png" width="638px" height="8px" />
-            <a href="#"><img class="ten" src="image/continue.png" /></a>
-            <a href="#"><img class="ten" src="image/back.png" /></a>
+            <span>VÉ PHIM BÁN CHẠY</span>
+            <img class="vien" src="@Url.Content("~/Content/icon/ngan.png")" width="638px" height="8px" />
+            <a href="#"><img class="ten" src="@Url.Content("~/Content/icon/continue.png")" /></a>
+            <a href="#"><img class="ten" src="@Url.Content("~/Content/icon/back.png")" /></a>
         </div><div class="clr"></div>
         <ul class="product_ul">
-            <li class="product_li">
-                <div class="img_product" style="background-image: url('image/product5.png')">
-                    <a href="#"><img class="sale" src="image/sale.png" />
-                </div></a>
-
-                <div class="product_div">
-
-                    <span class="name_product">Oh my Deer</span><span class="by">By artist</span><br />
-                    <div class="div_star">
-                        <img src="image/black_star.png" /><img src="image/black_star.png" />
-                        <img src="image/black_star.png" /><img src="image/black_star.png" />
-                        <img src="image/red_star.png" />
+            @foreach (var item in listGoodSale)
+            {
+                <li class="product_li">
+                    <div class="img_product" style="background-image: url('@Url.Content(item.Image)')">
+                        <a href="#"><img class="sale" src="@Url.Content("~/Content/icon/sale.png")" /></a>
                     </div>
-                    <span class="decription">
-                        <b>Lorem ipsum</b> dolor sit amet, con
-                        adipiscing elit, sed diam nonu.
-                    </span>
-                    <span class="gia_cu"><del>$14.99</del></span>
-                    <span class="gia_moi">$8.99</span>
-                    <a href="#"><img class="add" src="image/add_cart.png" /></a>
-                </div>
-            </li>
-            <li class="product_li">
-                <div class="img_product" style="background-image: url('image/product6.png')">
-                    <a href="#"><img class="sale" src="image/sale.png" />
-                </div></a>
 
-                <div class="product_div">
+                    <div class="product_div">
 
-                    <span class="name_product">Awaken the Hero</span><span class="by">By artist</span><br />
-                    <div class="div_star">
-                        <img src="image/black_star.png" /><img src="image/black_star.png" />
-                        <img src="image/black_star.png" /><img src="image/black_star.png" />
-                        <img src="image/red_star.png" />
+                        <span class="name_product">@item.Name</span><span class="by">By @item.Director</span><br />
+                        <span class="decription">
+                            @item.Description
+                        </span>
+                        <span class="gia">@item.Tickets.Where(t => t.ID == 1).SingleOrDefault().Price đ</span>
+                        <a href="#"><img class="add" src="@Url.Content("~/Content/icon/add_cart.png")" /></a>
                     </div>
-                    <span class="decription">
-                        <b>Lorem ipsum</b> dolor sit amet, con
-                        adipiscing elit, sed diam nonu.
-                    </span>
-                    <span class="gia_cu"><del>$14.99</del></span>
-                    <span class="gia_moi">$8.99</span>
-                    <a href="#"><img class="add" src="image/add_cart.png" /></a>
-                </div>
-            </li>
-            <li class="product_li">
-                <div class="img_product" style="background-image: url('image/product7.png')">
-                    <a href="#"><img class="sale" src="image/sale.png" />
-                </div></a>
+                </li>
+            }
 
-                <div class="product_div">
-
-                    <span class="name_product">Oh my Deer</span><span class="by">By artist</span><br />
-                    <div class="div_star">
-                        <img src="image/black_star.png" /><img src="image/black_star.png" />
-                        <img src="image/black_star.png" /><img src="image/black_star.png" />
-                        <img src="image/red_star.png" />
-                    </div>
-                    <span class="decription">
-                        <b>Lorem ipsum</b> dolor sit amet, con
-                        adipiscing elit, sed diam nonu.
-                    </span>
-                    <span class="gia_cu"><del>$14.99</del></span>
-                    <span class="gia_moi">$8.99</span>
-                    <a href="#"><img class="add" src="image/add_cart.png" /></a>
-                </div>
-            </li>
-            <li class="product_li">
-                <div class="img_product" style="background-image: url('image/product8.png')">
-                    <a href="#"><img class="sale" src="image/sale.png" />
-                </div></a>
-                <div class="product_div">
-
-                    <span class="name_product">Ravenna</span><span class="by">By artist</span><br />
-                    <div class="div_star">
-                        <img src="image/black_star.png" /><img src="image/black_star.png" />
-                        <img src="image/black_star.png" /><img src="image/black_star.png" />
-                        <img src="image/red_star.png" />
-                    </div>
-                    <span class="decription">
-                        <b>Lorem ipsum</b> dolor sit amet, con
-                        adipiscing elit, sed diam nonu.
-                    </span>
-                    <span class="gia_cu"><del>$14.99</del></span>
-                    <span class="gia_moi">$8.99</span>
-                    <a href="#"><img class="add" src="image/add_cart.png" /></a>
-                </div>
-            </li>
         </ul><div class="clr"></div>
     </div>
-    <div class="product_wrapper1">
+    @*<div class="product_wrapper1">
         <div class="title_all">
             <span>OUR MOST IMPORTANT PUBLISHERS</span>
             <img class="vien" src="image/ngan.png" width="630px" height="8px" />
@@ -206,7 +115,7 @@
             <li><a href="#"><img src="image/PSD4_12.png" /></a></li>
             <li><a href="#"><img src="image/PSD4_14.png" /></a></li>
         </ul><div class="clr"></div>
-    </div>
+    </div>*@
 </div>
 
 @section Scripts {

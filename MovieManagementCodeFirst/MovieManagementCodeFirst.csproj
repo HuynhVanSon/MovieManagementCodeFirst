@@ -137,6 +137,7 @@
     <Compile Include="Models\TicketType.cs" />
     <Compile Include="Models\FilmType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\MovieDataBag.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\banner.css" />
@@ -145,6 +146,9 @@
     <Content Include="Content\content.css" />
     <Content Include="Content\footer.css" />
     <Content Include="Content\icon\add_cart.png" />
+    <Content Include="Content\icon\intro-easy.png" />
+    <Content Include="Content\icon\intro-fast.png" />
+    <Content Include="Content\icon\intro-trust.png" />
     <Content Include="Content\icon\logo.png" />
     <Content Include="Content\image\anhnen.png" />
     <Content Include="Content\icon\back.png" />
@@ -155,14 +159,7 @@
     <Content Include="Content\icon\cart.png" />
     <Content Include="Content\icon\comment.png" />
     <Content Include="Content\icon\continue.png" />
-    <Content Include="Content\social-icon\icon1.png" />
-    <Content Include="Content\social-icon\icon2.png" />
-    <Content Include="Content\social-icon\icon3.png" />
-    <Content Include="Content\social-icon\icon4.png" />
-    <Content Include="Content\social-icon\icon5.png" />
-    <Content Include="Content\icon\intro1.png" />
-    <Content Include="Content\icon\intro2.png" />
-    <Content Include="Content\icon\intro3.png" />
+    <Content Include="Content\social-icon\icon-facebook.png" />
     <Content Include="Content\image\musica.jpg" />
     <Content Include="Content\image\musica1.jpg" />
     <Content Include="Content\image\nen_footer.png" />
@@ -196,6 +193,10 @@
     <Content Include="Content\slider-icon\play.png" />
     <Content Include="Content\slider-icon\triangle.png" />
     <Content Include="Content\slider.css" />
+    <Content Include="Content\social-icon\icon-gmail.png" />
+    <Content Include="Content\social-icon\icon-skype.png" />
+    <Content Include="Content\social-icon\icon-twitter.png" />
+    <Content Include="Content\social-icon\icon-youtube.png" />
     <Content Include="Content\style-slider.css" />
     <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
@@ -226,8 +227,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\FilmType.cshtml" />
+    <Content Include="Views\Home\Schedule.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Film\Create.cshtml" />

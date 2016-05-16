@@ -6,15 +6,15 @@
 			.wel .red_text{background-color: #cc3333;color: white;padding-right: 4px;padding-left:4px;}
 		.intro{margin-top: 22px;}
 		.intro ul{}
-		.intro1{height: 61px;width: 261px;background-color: #333;display: inline;padding: 20px;
+		.intro1{height: 110px;width: 261px;background-color: #333;display: inline;padding: 20px;
 			border-radius: 6px;margin-right: 29px;float: left;}
 			.intro1 img{float: left;margin-right: 10px;}
 			.intro_text1{font-family: fantasy;font-size: 18px; color: #fff;text-transform: uppercase;}
-		.intro2{height: 61px;width: 261px;background-color: #CC3333;display: inline;
+		.intro2{height: 110px;width: 261px;background-color: #CC3333;display: inline;
 			border-radius: 6px;margin-right: 29px;padding: 20px;float: left;}
 			.intro2 img{float: left;margin-right: 10px;}
 			.intro_text2{font-family: fantasy;font-size: 18px; color: #fff;text-transform: uppercase;}
-		.intro3{height: 61px;width: 261px;background-color: #333;
+		.intro3{height: 110px;width: 261px;background-color: #333;
 			display: inline;border-radius: 6px;padding: 20px;float: left;}
 			.intro3 img{float: left;margin-right: 10px;}
 			.intro_text3{font-family: fantasy;font-size: 18px; color: #fff;text-transform: uppercase;}

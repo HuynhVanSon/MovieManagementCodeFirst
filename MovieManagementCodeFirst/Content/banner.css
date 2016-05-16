@@ -22,8 +22,9 @@ body{margin:0px auto;padding:0px;background-image: url('../Content/image/anhnen.
 	.logo_menu_wrapper{width: 100%;margin-top: 4px;}
 	.logo_menu{width: 962px;margin: 0px auto;}
 	.logo {float: left;width: 150px;}
-	.menu_top{width: 452px;float: right;}
+	.menu_top{width: 602px;float: right;}
 	.menu_top_ul {float: right;margin-top: 23px;}
+    .menu_top_ul .hello{font-size: 14px;font-family: arial;color: #000;text-decoration: none;font-weight: bold;}
 	.menu_top_ul li{display: inline;margin-left: 25px;}
 	.menu_top_ul li a{font-size: 14px;font-family: arial;color: #000;text-decoration: none;font-weight: bold;}
     .menu_top_ul li a:hover{color: #cc3333}
@@ -36,4 +37,6 @@ body{margin:0px auto;padding:0px;background-image: url('../Content/image/anhnen.
 			border-right: 12px solid #333333;border-left: 12px solid #333333;}
 		.next{background-color: teal;height: 100%;float: left;background-image: url('../Content/image/bgslide2.png');
 			width: 193px;}
+
+.textsize{font-size: 14px;font-family: arial;color: #000;text-decoration: none;font-weight: bold;}
 		
